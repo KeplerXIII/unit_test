@@ -1,3 +1,5 @@
 import homework4_app
 
-print(homework4_app.task_5(['2018-01-01', 'yandex', 'cpc', 100]))
+print(homework4_app.task_2({'user1': [213, 213, 213, 15, 213],
+                            'user2': [54, 54, 119, 119, 119],
+                            'user3': [213, 98, 98, 35]}))

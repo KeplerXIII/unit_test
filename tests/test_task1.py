@@ -3,6 +3,23 @@
 import pytest
 import homework4_app
 
+
+FIXTURE = [
+    ({'user1': [213, 213, 213, 15, 213], 'user2': [57, 57, 119, 119, 119], 'user3': [213, 98, 98, 35]},
+     [98, 35, 15, 213, 119, 57]),
+    ({'user1': [213, 213, 213, 25, 213], 'user2': [54, 54, 119, 119, 119], 'user3': [213, 98, 98, 35]},
+     [98, 35, 213, 54, 119, 25]),
+    ({'user1': [213, 213, 213, 15, 213], 'user2': [54, 54, 119, 119, 119], 'user3': [213, 98, 98, 35]},
+     [98, 35, 15, 213, 54, 119])
+]
+
+
+@pytest.mark.parametrize("data, etalon", FIXTURE)
+def test_homework_task2(data, etalon):
+    result = homework4_app.task_2(data)
+    assert result == etalon
+
+
 FIXTURE = [
     ({'facebook': 55, 'yandex': 120, 'vk': 160, 'google': 99, 'email': 42, 'ok': 98}, "vk"),
     ({'facebook': 55, 'yandex': 120, 'vk': 115, 'google': 99, 'email': 42, 'ok': 98}, "yandex"),
@@ -27,4 +44,3 @@ FIXTURE = [
 def test_homework_task5(data, etalon):
     result = homework4_app.task_5(data)
     assert result == etalon
-

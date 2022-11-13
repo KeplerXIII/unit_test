@@ -24,13 +24,9 @@ def task_1():
     pprint(result_list)
 
 
-def task_2():
-    ids = {'user1': [213, 213, 213, 15, 213],
-           'user2': [54, 54, 119, 119, 119],
-           'user3': [213, 98, 98, 35]}
-
-    uniq_geo = list(set(sum(list(ids.values()), [])))
-    print(uniq_geo)
+def task_2(location):
+    uniq_geo = list(set(sum(list(location.values()), [])))
+    return uniq_geo
 
 
 def task_3():
@@ -58,7 +54,7 @@ def task_4(stats: dict) -> str:
     return best_company
 
 
-def task_5(data_list):
+def task_5(data_list: list) -> dict:
     if len(data_list) <= 1:
         return data_list[0]
     return {data_list[0]: task_5(data_list[1:])}
