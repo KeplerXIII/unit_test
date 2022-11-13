@@ -53,8 +53,7 @@ def task_3():
         pprint(f'Запросов состоящих из {request_dict} слов - {round(result[request_dict] / avg_requests * 100, 2)}%')
 
 
-stats = {'facebook': 55, 'yandex': 120, 'vk': 115, 'google': 99, 'email': 42, 'ok': 98}
-def task_4(stats):
+def task_4(stats: dict) -> str:
     best_company = max(stats, key=stats.get)
     return best_company
 

@@ -1,3 +1,3 @@
-from homework4_app import task_4, stats
+import homework4_app
 
-print(task_4(stats))
+print(homework4_app.task_5(['2018-01-01', 'yandex', 'cpc', 100]))
