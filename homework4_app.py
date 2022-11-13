@@ -53,10 +53,10 @@ def task_3():
         pprint(f'Запросов состоящих из {request_dict} слов - {round(result[request_dict] / avg_requests * 100, 2)}%')
 
 
-def task_4():
-    stats = {'facebook': 55, 'yandex': 120, 'vk': 115, 'google': 99, 'email': 42, 'ok': 98}
+stats = {'facebook': 55, 'yandex': 120, 'vk': 115, 'google': 99, 'email': 42, 'ok': 98}
+def task_4(stats):
     best_company = max(stats, key=stats.get)
-    pprint(best_company)
+    return best_company
 
 
 def task_5(data_list):
