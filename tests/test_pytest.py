@@ -64,3 +64,19 @@ def test_ya_api_creation_folder(data):
     assert result == 201 or result == 409
     result = ya.delete_folder(data)
     assert result == 204
+
+
+# Тестирование авторизации.
+from user import my_login, my_password
+from main import selenium_logger
+
+FIXTURE = [
+    (my_login, my_password)
+]
+
+
+@pytest.mark.parametrize("login, password", FIXTURE)
+def test_ya_selenium_logger(login, password):
+    result = selenium_logger(login, password)
+    personal_cabinet = "https://id.yandex.ru/"
+    assert result == personal_cabinet
