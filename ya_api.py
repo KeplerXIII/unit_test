@@ -32,9 +32,7 @@ class YandexDisk:
         status_code = response.status_code
         if status_code == 201:
             return status_code
-            # print(f'Папка {folder} создана')
         elif status_code == 409:
-            # print(f'Папка {folder} уже существует')
             return status_code
         else:
             response.raise_for_status()
