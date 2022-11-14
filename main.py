@@ -29,7 +29,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def selenium_logger(login, password):
+def selenium_logger(login: str, password: str) -> str:
     driver = webdriver.Chrome()
     url = "https://passport.yandex.ru/auth"
     driver.get(url)
